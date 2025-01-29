@@ -4,7 +4,7 @@ import requests
 app = Flask(__name__)
 
 # URL de votre API
-API_URL = "http://35.180.242.250"  # Remplacez par l'URL de votre API FastAPI
+API_URL = "http://51.44.19.170 "  # Remplacez par l'URL de votre API FastAPI
 
 @app.route("/")
 def index():
