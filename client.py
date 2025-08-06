@@ -4,7 +4,7 @@ import requests
 app = Flask(__name__)
 
 # URL de votre API
-API_URL = "http://51.44.19.170 "  # Remplacez par l'URL de votre API FastAPI
+API_URL = "http://51.44.19.170 "  
 
 @app.route("/")
 def index():
@@ -12,7 +12,7 @@ def index():
     try:
         response = requests.get(f"{API_URL}/etudiants")
         response.raise_for_status()
-        etudiants = response.json()  # Récupère les données de l'API
+        etudiants = response.json()  
     except requests.exceptions.RequestException as e:
         etudiants = []
         print(f"Erreur lors de la récupération des étudiants : {e}")
@@ -20,3 +20,4 @@ def index():
 
 if __name__ == "__main__":
     app.run(debug=True, host="127.0.0.1", port=8000)
+
